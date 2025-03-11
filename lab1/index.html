@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Gaming</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/welcome-page.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="side-menu" src="icons/side-menu.svg" alt="Side menu icon">
+        <img class="k-games-logo" src="icons/kgames-icon.svg" alt="KGames logo">
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <span class="tooltip">Search</span>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="liked-games-container">
+          <a href="favourite.html" class="liked-games-button">
+            <img class="liked-games" src="icons/heart-duotone.svg">
+          </a>
+          <span class="tooltip">Favourite games</span> 
+        </div>
+      </div>
+    </header>
+
+    <nav class="sidebar">
+
+      <div class="sidebar-link">
+        <a href="index.html" class="sidebar-link-anchor">
+          <img src="icons/home-page-icon.svg">
+          <div>Home</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="games.html" class="sidebar-link-anchor">
+          <img src="icons/games-icon.svg">
+          <div>Games</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="tournaments.html" class="sidebar-link-anchor">
+          <img src="icons/trophy-icon.svg">
+          <div>Tournaments</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="profile.html" class="sidebar-link-anchor">
+          <img src="icons/profile-icon.svg">
+          <div>My Profile</div>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="welcome-page">
+        <h1>Welcome to KGames</h1>
+        <div class="content-left">
+          <p class="description-text">Dive into the world of popular and exciting free online games to have a great time!</p>
+          <div class="play-button-container">
+            <a href="games.html" class="play-button">Play Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>All rights reserved</p>
+      <p>Contact us: kgames@gmail.com</p>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,180 @@
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgb(39, 40, 58);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.side-menu {
+  height: 34px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.k-games-logo {
+  height: 55px;
+}
+
+.middle-section {
+  flex: 1;
+  margin-right: 150px;
+  margin-left: 20px;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 12px;
+  font-size: 18px;
+  border: 2px solid rgb(23, 31, 46);
+  background-color: rgb(211, 212, 232);
+  border-radius: 18px;
+  box-shadow: inset 1px 2px 4px rgba(137, 137, 143, 0.884);
+}
+
+.search-bar::placeholder {
+  font-size: 16px;
+}
+
+.search-button {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(155, 158, 174);
+  border-color: rgb(0, 0, 0);
+  border-radius: 25px;
+  margin-left: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.search-button,
+.liked-games-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-button .tooltip,
+.liked-games-container .tooltip {
+  background-color: rgba(128, 128, 128, 0.512);
+  color: rgb(246, 246, 246);
+  position: absolute;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.liked-games-container:hover .tooltip {
+  opacity: 1;
+}
+
+.search-icon{
+  height: 25px;
+}
+
+.right-section {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.liked-games-container {
+  height: 50px;
+  width: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.liked-games-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.liked-games {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .middle-section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .search-bar {
+    max-width: 140px;
+  }
+  
+  .right-section {
+    margin-right: 10px;
+    width: 50px;
+  }
+  
+  .liked-games-container {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-menu {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .k-games-logo {
+    height: 45px;
+  }
+  
+  .middle-section {
+    max-width: 150px;
+  }
+  
+  .right-section {
+    margin-right: 5px;
+    width: 40px;
+  }
+  
+  .liked-games {
+    height: 30px;
+  }
+  
+  .liked-games-container {
+    width: 40px;
+    height: 40px;
+  }
+}

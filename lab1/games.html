@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/games-page.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="side-menu" src="icons/side-menu.svg" alt="Side menu icon">
+        <img class="k-games-logo" src="icons/kgames-icon.svg" alt="KGames logo">
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <span class="tooltip">Search</span>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="liked-games-container">
+          <a href="favourite.html" class="liked-games-button">
+            <img class="liked-games" src="icons/heart-duotone.svg">
+          </a>
+          <span class="tooltip">Favourite games</span> 
+        </div>
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <a href="index.html" class="sidebar-link-anchor">
+          <img src="icons/home-page-icon.svg">
+          <div>Home</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="games.html" class="sidebar-link-anchor">
+          <img src="icons/games-icon.svg">
+          <div>Games</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="tournaments.html" class="sidebar-link-anchor">
+          <img src="icons/trophy-icon.svg">
+          <div>Tournaments</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="profile.html" class="sidebar-link-anchor">
+          <img src="icons/profile-icon.svg">
+          <div>My Profile</div>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="games-section">
+        <h1>Games Collection</h1>
+        
+        <div class="game-categories">
+          <h2 class="category-title">Puzzle Games</h2>
+
+          <div class="games-grid">
+            <!--1 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/spades-puzzle.avif" alt="Spades">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Spades</h3>
+                <p class="game-genre">Genre: Puzzle</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">4.8</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>1.500 active players</span>
+                </p>
+              </div>
+            </div>
+
+            <!--2 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/block-champ-puzzle.avif" alt="Block Champ">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Block Champ</h3>
+                <p class="game-genre">Genre: Puzzle</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">4.7</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>1.200 active players</span>
+                </p>
+              </div>
+            </div>
+
+            <!--3 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/words-of-wonders-puzzle.avif" alt="Guess Words">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Words Of Wonders</h3>
+                <p class="game-genre">Genre: Puzzle</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="rating-number">4.2</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>985 active players</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-categories">
+          <h2 class="category-title">.io Games</h2>
+
+          <div class="games-grid">
+            <!--1 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/paper-io.avif" alt="Paper.io">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Paper.io</h3>
+                <p class="game-genre">Genre: .io</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">4.9</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>5.125 active players</span>
+                </p>
+              </div>
+            </div>
+
+            <!--2 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/agar-io.avif" alt="Agar.io">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Agar.io</h3>
+                <p class="game-genre">Genre: .io</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">5.0</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>8.254 active players</span>
+                </p>
+              </div>
+            </div>
+
+            <!--3 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/mope-io.avif" alt="Mope.io">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Mope.io</h3>
+                <p class="game-genre">Genre: .io</p>
+                <div class="game-rating">
+                  <span class="stars">★★★☆☆</span>
+                  <span class="rating-number">3.9</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>999 active players</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-categories">
+          <h2 class="category-title">Casual Games</h2>
+
+          <div class="games-grid">
+            <!--1 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/cross-stitch-casual.avif" alt="Cross Stitch">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Cross Stitch</h3>
+                <p class="game-genre">Genre: Casual</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">4.8</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>4.656 active players</span>
+                </p>
+              </div>
+            </div>
+
+            <!--2 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/paper-delivery-casual.avif" alt="Paper Delivery">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Paper Delivery</h3>
+                <p class="game-genre">Genre: Casual</p>
+                <div class="game-rating">
+                  <span class="stars">★★☆☆☆</span>
+                  <span class="rating-number">3.2</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>2.300 active players</span>
+                </p>
+              </div>
+            </div>
+
+            <!--3 game-->
+            <div class="game-preview">
+              <div class="thumbnail-row">
+                <img class="game-image" src="games-images/donuteria-casual.avif" alt="Papa's Donuteria">
+                <button class="favourite-button">
+                  <img src="icons/heart-duotone.svg" alt="Add to favourites">
+                </button>
+              </div>
+
+              <div class="game-info">
+                <h3 class="game-title">Papa's Donuteria</h3>
+                <p class="game-genre">Genre: Casual</p>
+                <div class="game-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-number">5.0</span>
+                </div>
+                <p class="active-players">
+                  <img src="icons/active-player-icon.svg" alt="Players">
+                  <span>6.201 active players</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>
