@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/my-profile.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="side-menu" src="icons/side-menu.svg" alt="Side menu icon">
+        <img class="k-games-logo" src="icons/kgames-icon.svg" alt="KGames logo">
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <span class="tooltip">Search</span>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="liked-games-container">
+          <a href="favourite.html" class="liked-games-button">
+            <img class="liked-games" src="icons/heart-duotone.svg">
+          </a>
+          <span class="tooltip">Favourite games</span> 
+        </div>
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <a href="index.html" class="sidebar-link-anchor">
+          <img src="icons/home-page-icon.svg">
+          <div>Home</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="games.html" class="sidebar-link-anchor">
+          <img src="icons/games-icon.svg">
+          <div>Games</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="tournaments.html" class="sidebar-link-anchor">
+          <img src="icons/trophy-icon.svg">
+          <div>Tournaments</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="profile.html" class="sidebar-link-anchor">
+          <img src="icons/profile-icon.svg">
+          <div>My Profile</div>
+        </a>
+      </div>
+    </nav>
+
+    <main class="my-profile-container">
+
+      <section class="user-info">
+        <img src="icons/profile-icon.svg" alt="My Profile Picture" class="my-profile-picture">
+        <h1 class="profile-username">kv338</h1>
+        
+        <div class="user-level">
+          <span class="level-badge">Level 7</span>
+          <span>720 XP</span>
+        </div>
+
+        <div class="progress">
+          <div class="xp-bar"></div>
+        </div>
+        <p>You need 120 XP to reach next level</p>
+
+        <div class="stats-grid">
+          <div class="stats-card">
+            <div class="stats-quantity">12</div>
+            <div class="stats-label">Games played</div>
+          </div>
+
+          <div class="stats-card">
+            <div class="stats-quantity">2</div>
+            <div class="stats-label">Awards</div>
+          </div>
+
+          <div class="stats-card">
+            <div class="stats-quantity">1</div>
+            <div class="stats-label">Tournaments</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="user-activity">
+        <div class="game-history">
+          <h2 class="section-header">
+            <img src="icons/history-log.svg" alt="Game History Icon">Game History
+          </h2>
+
+          <div class="game-history-item">
+            <img src="games-images/spades-puzzle.avif" alt="Spades" class="game-icon">
+            <div class="game-detailed">
+              <div class="game-name">Spades</div>
+              <div class="game-date">01/01/2025, 13:00</div>
+            </div>
+            <div class="game-result-win">Win</div>
+          </div>
+
+          <div class="game-history-item">
+            <img src="games-images/paper-io.avif" alt="Pper.io" class="game-icon">
+            <div class="game-detailed">
+              <div class="game-name">Paper.io</div>
+              <div class="game-date">01/02/2025, 17:10</div>
+            </div>
+            <div class="game-result-loss">Loss</div>
+          </div>
+        </div>
+
+        <div class="achievements">
+          <h2 class="section-header">
+            <img src="icons/trophy-icon.svg" alt="trophy-icon">Awards
+          </h2>
+
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <img src="icons/achievement-award-icon.svg" alt="The Guesser" class="achievement-icon">
+              <div class="achievement-name">The Guesser</div>
+              <div class="achievement-descr">Guess all words within 10 seconds in Words Of Wonders</div>
+            </div>
+
+            <div class="achievement-card">
+              <img src="icons/achievement-award-icon.svg" alt="Cheff's Kiss" class="achievement-icon">
+              <div class="achievement-name">Cheff's Kiss</div>
+              <div class="achievement-descr">Don't dissapoint a single visitor in Papa's Donuteria</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/profile-progress.js"></script>
+  </body>
+</html>
