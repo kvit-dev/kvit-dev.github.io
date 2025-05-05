@@ -1,0 +1,211 @@
+.page-content .favourites-page {
+  background-color: rgb(243, 231, 216);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.favourites-page .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin-right: 240px;
+  padding-left: 240px;
+}
+
+.favourite-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(168, 23, 23);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.no-favourites {
+  font-size: 20px;
+  font-weight: 500;
+  color: #6f0a0a;
+  background: rgba(163, 150, 150, 0.5);
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.favourites-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.favourite-item {
+  display: flex;
+  border-radius: 15px;
+  background: rgba(30, 30, 30, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 180px;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.favourite-item:hover {
+  transform: translateY(-5px);
+}
+
+.favourite-item-image {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.favourite-item-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 15px;
+  justify-content: center;
+}
+
+.favourite-item-title {
+  font-size: 22px;
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.favourite-item-genre {
+  color: #bcbcbc;
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.favourite-item-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.favourite-item-rating .stars {
+  font-size: 16px;
+  color: rgb(220, 160, 10);
+  margin-right: 5px;
+}
+
+.favourite-item-rating .rating-number {
+  color: white;
+}
+
+.favourite-item-players {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 15px;
+}
+
+.favourite-item-players img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.remove-favourite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 16, 16, 0.7);
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-favourite-button:hover {
+  background: rgba(214, 187, 193, 0.7);
+}
+
+.remove-favourite-button img {
+  width: 26px;
+  height: 26px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .favourites-page .main-content {
+    margin: 0;
+    padding: 50px 20px 20px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favourite-title {
+    font-size: 28px; 
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .favourites-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favourite-item {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .favourite-item-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .favourite-item-info {
+    padding: 15px;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .favourite-item-title {
+    font-size: 20px;
+  }
+
+  .favourite-item-genre,
+  .favourite-item-rating,
+  .favourite-item-players {
+    font-size: 16px;
+  }
+
+  .remove-favourite-button {
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .no-favourites {
+    font-size: 16px;
+    padding: 30px 15px;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

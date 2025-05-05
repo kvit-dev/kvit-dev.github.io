@@ -1,0 +1,387 @@
+.games-section {
+  padding: 15px;
+  padding-left: 100px;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+.games-section h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 2px;
+  color: rgb(200, 166, 232);
+}
+
+.game-categories {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 20px;
+  padding-bottom: 7px;
+  border-bottom: 3px solid white;
+  position: relative;
+}
+
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 140px;
+  height: 3px;
+  background-color: #5d3fd3;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  width: 100%;
+}
+
+#recommendations-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 15px;
+}
+
+.thumbnail-row {
+  position: relative;
+  margin-bottom: 8px;  
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #333;
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: -10px;
+  box-shadow: 2px 1px 10px rgb(55, 44, 96);
+  overflow: hidden;
+}
+
+#recommendations-grid .thumbnail-row {
+  width: 300px;
+  height: 150px;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform .55s;
+}
+
+.thumbnail-row:hover .game-image {
+  transform: scale(1.1);
+}
+
+.favourite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 20px;
+  padding: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.favourite-button img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.favourite-button:hover {
+  background: rgba(152, 147, 172, 0.7);
+}
+
+.game-info {
+  display: grid;
+  padding: 10px 5px;
+}
+
+#recommendations-grid .game-info {
+  padding: 5px 2px;
+}
+
+.game-title {
+  font-size: 23px;
+  margin: 0 0 5px 0;
+  color: white;
+}
+
+.game-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.game-title a:hover {
+  color: #ac4fdd;
+  text-decoration: underline;
+}
+
+.game-genre {
+  color: #bcbcbc;
+  margin: 0 0 5px 0;
+  font-size: 17px;
+}
+
+#recommendations-grid .game-genre {
+  font-size: 15px;
+}
+
+.game-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: rgb(220, 160, 10);
+  font-size: 18px;
+}
+
+#recommendations-grid .stars {
+  font-size: 16px;
+}
+
+.rating-number {
+  color: white;
+}
+
+.active-players {
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin: 0;
+  font-size: 15px;
+}
+
+#recommendations-grid .active-players {
+  font-size: 13px;
+}
+
+.active-players img {
+  width: 25px;
+  margin-right: 5px;
+}
+
+#recommendations-grid .active-players img {
+  width: 20px;
+}
+
+.recommendations-section {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+  min-height: 50px;
+}
+
+.recs-category-title {
+  font-size: 25px;
+  text-align: center;
+  color: rgb(243, 27, 160);
+  margin-bottom: 20px;
+  padding-bottom: 7px;
+  border-bottom: 3px solid white;
+  position: relative;
+}
+
+.recs-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 140px;
+  height: 3px;
+  background-color: #e47cc3;
+}
+
+.refresh-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.refresh-button {
+  background-color: #d570a3;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 18px;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #e250b8;
+}
+
+.game-preview {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-preview.favourite {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.game-preview.favourite .thumbnail-row {
+  border: 3px solid #e365a4;
+  box-shadow: 0 0 15px rgba(227, 101, 164, 0.7);
+  outline: none;
+}
+
+.sorting-controls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px;
+}
+
+.sort-button {
+  background-color: #5d3fd3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(93, 63, 211, 0.4);
+}
+
+.sort-button:hover {
+  background-color: #7250e6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(93, 63, 211, 0.6);
+}
+
+.sort-button.active {
+  background-color: #e365a4;
+  box-shadow: 0 2px 8px rgba(227, 101, 164, 0.4);
+}
+
+.sort-button.active:hover {
+  background-color: #e250b8;
+  box-shadow: 0 4px 12px rgba(227, 101, 164, 0.6);
+}
+
+@keyframes favouriteAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.05); }
+}
+
+.game-preview.favourite {
+  animation: favouriteAnimation 0.3s ease forwards;
+}
+
+.game-preview.favourite .favourite-button {
+  background: rgba(227, 101, 164, 0.7);
+}
+
+@keyframes fadeIn {
+  from  {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .thumbnail-row {
+    width: 300px;
+    height: 150px;
+  }
+
+  #recommendations-grid .thumbnail-row {
+    width: 250px;
+    height: 125px;
+  }
+
+  .game-title {
+    font-size: 20px;
+  }
+
+  .game-genre {
+    font-size: 15px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+
+  .active-players {
+    font-size: 14px;
+  }
+
+  .sort-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #recommendations-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .thumbnail-row {
+    width: 250px;
+    height: 125px;
+  }
+
+  #recommendations-grid .thumbnail-row {
+    width: 200px;
+    height: 100px;
+  }
+
+  .game-title {
+    font-size: 18px;
+  }
+
+  .game-genre {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 14px;
+  }
+
+  .active-players {
+    font-size: 13px;
+  }
+
+  .sort-button {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
