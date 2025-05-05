@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/tournaments.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="side-menu" src="icons/side-menu.svg" alt="Side menu icon">
+        <img class="k-games-logo" src="icons/kgames-icon.svg" alt="KGames logo">
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <span class="tooltip">Search</span>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="liked-games-container">
+          <a href="favourite.html" class="liked-games-button">
+            <img class="liked-games" src="icons/heart-duotone.svg">
+          </a>
+          <span class="tooltip">Favourite games</span> 
+        </div>
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <a href="index.html" class="sidebar-link-anchor">
+          <img src="icons/home-page-icon.svg">
+          <div>Home</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="games.html" class="sidebar-link-anchor">
+          <img src="icons/games-icon.svg">
+          <div>Games</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="tournaments.html" class="sidebar-link-anchor">
+          <img src="icons/trophy-icon.svg">
+          <div>Tournaments</div>
+        </a>
+      </div>
+
+      <div class="sidebar-link">
+        <a href="profile.html" class="sidebar-link-anchor">
+          <img src="icons/profile-icon.svg">
+          <div>My Profile</div>
+        </a>
+      </div>
+    </nav>
+
+    <main class="tournaments-main">
+      <h1 class="tournaments-title">Upcoming Tournaments</h1>
+
+      <div class="tournaments-filter">
+        <button class="filter-button-active">All Tournaments</button>
+        <button class="filter-button">Puzzle Games</button>
+        <button class="filter-button">io Games</button>
+        <button class="filter-button">Casual Games</button>
+      </div>
+
+      <div class="tournaments-container">
+        <div class="tournament-card">
+          <div class="tournament-header">
+            <img src="icons/medal-gold-icon.svg" alt="Gold Medal" class="tournament-icon">
+            <h2 class="tournament-name">The Fastest Brain</h2>
+            <span class="tournament-prize">Prize: &#36;15.000</span>
+          </div>
+
+          <div class="tournament-info">
+            <div class="info-item">
+              <span class="info-label">Date:</span>
+              <span class="info-value">April 1, 2025</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Time:</span>
+              <span class="info-value">12:30</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Format:</span>
+              <span class="info-value">A team of one</span>
+            </div>
+          </div>
+
+          <div class="tournament-description">
+            <p>Use your wits to achieve victory and win unique prizes. Are you ready for an intellectual challenge? Unlock your potential in the world of puzzles!</p>
+          </div>
+
+          <div class="tournament-requirements">
+            <h3>Requirements:</h3>
+            <ul>
+              <li>All team members must be 14+</li>
+              <li>Arrive on site in advance</li>
+              <li>Team of 1 player</li>
+            </ul>
+          </div>
+
+          <div class="tournament-registration">
+            <span class="available-slots">12/24 members registered</span>
+            <button class="register-button">Register Now</button>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="tournament-card">
+          <div class="tournament-header">
+            <img src="icons/medal-silver-icon.svg" alt="Silver Medal" class="tournament-icon">
+            <h2 class="tournament-name">io Drift</h2>
+            <span class="tournament-prize">Prize: &#36;9.000</span>
+          </div>
+
+          <div class="tournament-info">
+            <div class="info-item">
+              <span class="info-label">Date:</span>
+              <span class="info-value">April 8, 2025</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Time:</span>
+              <span class="info-value">14:00</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Format:</span>
+              <span class="info-value">A team of one</span>
+            </div>
+          </div>
+
+          <div class="tournament-description">
+            <p>This is your chance to show who the real master of the game is and become famous among the best of the best!</p>
+          </div>
+
+          <div class="tournament-requirements">
+            <h3>Requirements:</h3>
+            <ul>
+              <li>All team members must be 14+</li>
+              <li>Strict ban on cheat codes</li>
+              <li>Be sure to register online</li>
+            </ul>
+          </div>
+
+          <div class="tournament-registration">
+            <span class="available-slots">23/24 members registered</span>
+            <button class="register-button">Register Now</button>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="tournament-card">
+          <div class="tournament-header">
+            <img src="icons/medal-bronze-icon.svg" alt="Bronze Medal" class="tournament-icon">
+            <h2 class="tournament-name">Cross Stitch Master</h2>
+            <span class="tournament-prize">Prize: &#36;2.000</span>
+          </div>
+
+          <div class="tournament-info">
+            <div class="info-item">
+              <span class="info-label">Date:</span>
+              <span class="info-value">April 10, 2025</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Time:</span>
+              <span class="info-value">18:00</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Format:</span>
+              <span class="info-value">A team of one</span>
+            </div>
+          </div>
+
+          <div class="tournament-description">
+            <p>Do you like to create, experiment with colors and give your ideas life? Then this tournament is for you!</p>
+          </div>
+
+          <div class="tournament-requirements">
+            <h3>Requirements:</h3>
+            <ul>
+              <li>All team members must be 14+</li>
+              <li>The works must be created exclusively during the tournament</li>
+              <li>Be sure to register online</li>
+            </ul>
+          </div>
+
+          <div class="tournament-registration">
+            <span class="available-slots">30/30 members registered</span>
+            <button class="register-button">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tournament-rules">
+        <h2 class="rules-title">Tournament Rules & Guidelines</h2>
+        <div class="rules-content">
+          <div class="rule-section">
+            <h3>General Rules</h3>
+            <ul>
+              <li>Players must be online at least 15 minutes before start</li>
+              <li>Disrespectful behaviour will result in disqualification</li>
+              <li>You must follow fair play guidelines</li>
+              <li>Game updates must be installed before tournament start</li>
+              <li>You must have stable internet connection</li>
+            </ul>
+          </div>
+
+          <div class="rule-section">
+            <h3>Prizes</h3>
+            <ul>
+              <li>You must provide valid personal info and paymnet information</li>
+              <li>Prizes will be sent out within 5 days after the tournament</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
