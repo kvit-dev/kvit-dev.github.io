@@ -1,0 +1,3 @@
+node_modules
+serviceAccountKey.json
+src/firebase/config.jsx
