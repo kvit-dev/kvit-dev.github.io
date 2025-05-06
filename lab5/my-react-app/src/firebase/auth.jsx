@@ -1,7 +1,11 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, getIdToken } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, 
+  onAuthStateChanged, getIdToken, GoogleAuthProvider, signInWithPopup, 
+  signInWithRedirect, getRedirectResult, sendPasswordResetEmail } from "firebase/auth";
+
 import app from './config';
 
 const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 let authStateCallback = null;
  
 export async function signUp(email, password) {
@@ -15,6 +19,17 @@ export async function signUp(email, password) {
   }
 }
 
+export async function resetPassword(email) {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    console.log("Password reset email sent to:", email);
+    return true;
+  } catch (error) {
+    console.error("Password reset error:", error.message);
+    throw error;
+  }
+}
+
 export async function login(email, password) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -22,6 +37,36 @@ export async function login(email, password) {
     return userCredential.user;
   } catch (error) {
     console.error("Login error:", error.message);
+    throw error;
+  }
+}
+
+export async function signInWithGoogle(useRedirect = false) {
+  try {
+    if (useRedirect) {
+      await signInWithRedirect(auth, googleProvider);
+      return null;
+    } else {
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log("User signed in with Google:", result.user.email);
+      return result.user;
+    }
+  } catch (error) {
+    console.error("Google sign-in error:", error.message);
+    throw error;
+  }
+}
+
+export async function getGoogleRedirectResult() {
+  try {
+    const result = await getRedirectResult(auth);
+    if (result) {
+      console.log("User signed in with Google (redirect):", result.user.email);
+      return result.user;
+    }
+    return null;
+  } catch (error) {
+    console.error("Google redirect result error:", error.message);
     throw error;
   }
 }
