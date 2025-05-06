@@ -54,7 +54,6 @@ function App() {
               } />
               <Route path="/tournaments" element={<TournamentsPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </div>
         </div>
