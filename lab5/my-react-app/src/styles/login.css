@@ -1,5 +1,5 @@
 .auth-container {
-  margin: 100px auto;
+  margin: 100px auto 100px 100px;
   max-width: 400px;
   padding: 30px;
   text-align: center;
@@ -131,11 +131,13 @@
 @media (max-width: 768px) {
   .auth-container {
     max-width: 320px;
+    margin: 100px auto 100px 80px;
   }
 }
 
 @media (max-width: 480px) {
   .auth-container {
     max-width: 280px;
+    margin: 100px auto 100px 60px;
   }
 }

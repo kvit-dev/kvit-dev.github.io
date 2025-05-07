@@ -16,13 +16,13 @@
 .left-section {
   display: flex;
   align-items: center;
-  width: 200px;
+  width: 180px;
 }
 
 .side-menu {
   height: 34px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .k-games-logo {
@@ -35,6 +35,7 @@
   max-width: none;
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 
 .search-bar-container {
@@ -42,7 +43,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .search-bar {
@@ -90,7 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 200px;
+  width: 180px;
   gap: 8px;
 }
 
@@ -266,12 +267,13 @@
 
 @media (max-width: 768px) {
   .middle-section {
-    max-width: 250px;
+    max-width: 300px;
     margin-right: 10px;
+    margin-left: 5px;
   }
 
   .search-bar {
-    max-width: 200px;
+    max-width: 250px;
     font-size: 15px;
   }
 
@@ -279,16 +281,21 @@
     margin-right: 8px;
     width: auto;
   }
+
+  .left-section {
+    width: 160px;
+  }
 }
 
 @media (max-width: 480px) {
   .middle-section {
-    max-width: 200px;
+    max-width: 240px;
     margin-right: 5px;
+    margin-left: 5px;
   }
 
   .search-bar {
-    max-width: 160px;
+    max-width: 200px;
     font-size: 14px;
     padding-right: 36px;
   }
@@ -299,6 +306,15 @@
 
   .search-icon {
     height: 16px;
+  }
+
+  .left-section {
+    width: 150px;
+  }
+
+  .side-menu {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 

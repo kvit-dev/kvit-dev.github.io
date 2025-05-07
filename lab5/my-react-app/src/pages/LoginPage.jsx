@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { login, signUp, signInWithGoogle, getGoogleRedirectResult, resetPassword } from '../firebase/auth';
+import { saveUserProfile, getUserProfile } from '../firebase/database';
 import "../styles/login.css";
 
 function LoginPage() {
@@ -20,6 +21,16 @@ function LoginPage() {
         setIsLoading(true);
         const user = await getGoogleRedirectResult();
         if (user) {
+          const existingProfile = await getUserProfile(user.uid);
+          
+          if (!existingProfile) {
+            await saveUserProfile(user.uid, {
+              email: user.email,
+              displayName: user.displayName || '',
+              photoURL: user.photoURL || '',
+              createdAt: new Date().toISOString(),
+            });
+          }
           navigate('/profile');
         }
       } catch (err) {
@@ -63,7 +74,13 @@ function LoginPage() {
     try {
       setIsLoading(true);
       if (isRegistering) {
-        await signUp(email, password);
+        const user = await signUp(email, password);
+        
+        await saveUserProfile(user.uid, {
+          email: user.email,
+          displayName: '',
+          createdAt: new Date().toISOString(),
+        });
       } else {
         await login(email, password);
       }
@@ -81,6 +98,15 @@ function LoginPage() {
       setError('');
       const user = await signInWithGoogle();
       if (user) {
+        const existingProfile = await getUserProfile(user.uid);
+        if (!existingProfile) {
+          await saveUserProfile(user.uid, {
+            enail: user.email,
+            displayName: user.displayName || '',
+            photoURL: user.photoURL || '',
+            createdAt: new Date().toISOString(),
+          });
+        }
         navigate('/profile');
       }
     } catch (err) {
