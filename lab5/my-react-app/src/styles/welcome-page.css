@@ -6,6 +6,7 @@
   padding: 40px;
   padding-left: 90px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .welcome-page h1 {
@@ -16,12 +17,14 @@
   text-align: center;
   margin-bottom: 40px;
   width: 100%;
+  word-wrap: break-word;
 }
 
 .content-left {
   align-items: flex-start;
   width: 100%;
   padding-left: 150px;
+  box-sizing: border-box;
 }
 
 .description-text {
@@ -30,6 +33,7 @@
   margin-bottom: 20px;
   max-width: 50%;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .play-button-container {
@@ -56,17 +60,22 @@
 
 @media (max-width: 768px) {
   .welcome-page {
-    padding-left: 75px;
+    padding: 30px;
+    padding-left: 40px;
   }
 
-  h1 {
+  .welcome-page h1 {
     font-size: 60px;
     margin-bottom: 30px;
   }
 
+  .content-left {
+    padding-left: 60px;
+  }
+
   .description-text {
     font-size: 30px;
-    max-width: 70%;
+    max-width: 80%;
   }
 
 }
@@ -75,19 +84,20 @@
   .welcome-page {
     padding: 20px;
     padding-left: 60px;
-    padding-top: 80px; 
     padding-bottom: 30px;
   }
 
-  h1 {
-    font-size: 40px;
+  .welcome-page h1 {
+    font-size: 36px;
     margin-bottom: 20px;
+    padding: 0 5px;
   }
 
   .description-text {
-    font-size: 24px;
+    font-size: 22px;
     max-width: 100%;
     margin-bottom: 15px;
+    padding: 0 5px;
   }
 
   .play-button-container {
